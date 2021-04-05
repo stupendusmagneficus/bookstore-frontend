@@ -10,7 +10,7 @@ import './book-list.css';
 
 class BookList extends Component {
 
-  componentDidMount() { 
+  componentDidMount() {
     // 1. receive data
     const { bookstoreService } = this.props;
     const data = bookstoreService.getBooks();
@@ -22,7 +22,7 @@ class BookList extends Component {
   render() {
     const { books } = this.props;
     return (
-      <ul>
+      <ul className="book-list">
         {
           books.map((book) => {
             return (
